@@ -1,0 +1,119 @@
+/* Reset and box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: linear-gradient(red, green, blue);
+    padding: 70px 0;
+    gap: 20px;
+}
+
+/* Card styling */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    position: relative; /* For positioning nearest seller */
+}
+
+/* Image styling */
+.image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Text styling */
+.name {
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.shipping, .price {
+    font-size: 0.875rem;
+    color: grey;
+    text-align: left;
+    width: 100%; /* Ensures full width for left alignment */
+    padding-left: 20px; /* Adds some padding for better look */
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: black; /* Change color to differentiate from shipping */
+    margin-bottom: 20px;
+}
+
+/* Button container styling */
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Button styling */
+.btn {
+    height: 40px;
+    width: 120px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-cart {
+    background-color: gray;
+    color: white;
+}
+
+.buy {
+    background-color: rgb(130, 14, 239);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Nearest seller badge styling */
+.nearest {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute; /* Positioning it */
+    top: 10px; /* Adjust as necessary */
+    left: 10px; /* Adjust as necessary */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
